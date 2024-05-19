@@ -1,0 +1,58 @@
+h1 {
+    color: black;
+    position: absolute;
+    left:30%;
+    top:13.5%;
+    z-index: 2;
+}
+
+h2 {
+    padding-bottom: 0;
+}
+
+.tooLong {
+    font-size: 1.4em;
+}
+
+.blockPrinc {
+    padding-bottom: 8%;
+}
+
+.block {
+    margin-top: 5%;
+    margin-bottom: 5%;
+}
+
+.miniBande {
+    height: 0.1em; 
+    background-color: rgb(255, 160, 122);
+}
+
+.dates {
+    color: salmon;
+    font-weight: lighter;
+    font-size: 1em;
+}
+
+.dateExpo23 {
+    font-weight: bold;
+    padding-bottom: 5%;
+}
+
+.pImg {
+    display: flex;
+}
+
+.pImg p {
+    width: 70%;
+    text-align: justify;
+    padding-right: 5%;
+}
+
+.pImg img {
+    width:50%;
+}
+
+
+
+

@@ -1,0 +1,189 @@
+@font-face {
+    font-family: "Cormorant_Garamond";
+    src: url("../polices/Cormorant_Garamond/CormorantGaramond-Regular.ttf") format("TrueType");
+}
+
+* {
+    margin:0;
+    font-family:Cormorant_Garamond, Lucida, Verdana, Tahoma;
+    width:auto;
+    height:auto;
+}
+
+body {
+    width:100%;
+    height:100%;
+    background-color:whitesmoke;
+}
+
+/*header*/
+
+#navbar {
+    display: flex;
+    justify-content: space-between;
+    padding: 3% 8%;
+}
+
+#blockLogo {
+    width:30%;
+}
+
+#logo {
+    width:40%;
+}
+
+ul {
+    display: none;
+    position: absolute;
+    top: 2%;
+    left: 51%;
+    background-color: whitesmoke;
+    border-radius: 20px;
+    box-shadow: 0px 8px 8px 0px black;
+}
+
+ul.open {
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+    padding: 2% 1%;
+    width: 30%;    
+}
+
+ul li {
+    list-style-type: none;
+    width: 100%;
+    padding-bottom: 5%;
+}
+
+ul li a {
+    text-decoration: none;
+    color:salmon;
+    font-weight: bold;
+}
+
+ul li a:hover {
+    color:black;
+    font-weight: 100;
+}
+/*Burger*/
+.burger_button {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-end;
+    justify-content: center;
+    cursor: pointer;
+    width: 70%;
+}
+
+.burger_button .line {
+    width: 30px;
+    height: 4px;
+    margin: 2px 0;
+    background-color: black;
+    transition: all 0.3s ease;
+}
+
+.burger_button.open .line:nth-child(1) {
+    transform: rotate(-40deg) translate(-0px, 10px);
+}
+.burger_button.open .line:nth-child(2) {
+    opacity: 0;
+}
+.burger_button.open .line:nth-child(3) {
+    transform: rotate(40deg) translate(-0px, -10px);
+}
+
+/*Main*/
+/* essai display grid*/
+.blockPrinc {
+    display: grid;
+    grid-template-columns: repeat(5, 1fr);
+    grid-template-rows: repeat(2, 2em);
+}
+
+.bande {
+    height:2em;
+    background-color: rgb(255, 160, 122);
+    grid-column: 1 / 6;
+    grid-row: 1;    
+}
+
+h1, h2 {
+    color: salmon;
+    padding-bottom: 3%;
+}
+
+.block {
+    margin-top: 8%;
+    padding: 0% 8%;
+}
+
+/*footer*/
+footer {
+    width:84%;
+    padding: 1% 8%;
+    position:fixed;
+    bottom:0;
+    text-align: center;
+    display: flex;
+    justify-content: space-around;
+    background-color: rgb(255, 160, 122);
+}
+
+footer h2 {
+    color: whitesmoke;
+    font-size:medium;
+    padding-bottom: 5%;
+}
+
+.rzo {
+    width: 30%;
+}
+
+.footImg {
+    display: flex;
+    justify-content: space-around;
+}
+
+footer p {
+    padding: 5% 0%;
+    width: 40%;
+}
+
+.footImg img {
+    width: 20px;
+    padding:1%;
+}
+
+footer a {
+    text-decoration: none;
+    color: white;
+    padding:3%;
+    width:100%;
+}
+
+footer a:hover {
+    color: black;
+}
+
+footer img:hover {
+    background-color: white;
+    border: 3px solid white;
+    border-radius: 30px;
+}
+
+/*Media quieries*/
+/*Events23
+.expo3 img {
+    width:40%;
+    display: none;
+    padding-right: 50%;
+    position: relative;
+}
+
+.expo3:hover .img_hover{
+    display:block; 
+    position: absolute;
+    left: 55%;
+}*/
