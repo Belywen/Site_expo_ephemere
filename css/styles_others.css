@@ -14,13 +14,33 @@ h2 {
     font-size: 1.4em;
 }
 
-.blockPrinc {
+.block {
+    margin-top: 0%;
+    margin-bottom: 5%;
+}
+
+.blockMap p {
+    text-align: center;
     padding-bottom: 8%;
 }
 
-.block {
-    margin-top: 5%;
-    margin-bottom: 5%;
+iframe {
+    width: 100%;
+    height: 15em;
+}
+
+ol {
+    list-style-type: none;
+    padding-top: 2%;
+    padding-left: 8%;
+}
+
+.direction {
+    font-weight: bold;
+}
+
+.logoMetro {
+    width: 6%;
 }
 
 .miniBande {
@@ -52,7 +72,3 @@ h2 {
 .pImg img {
     width:50%;
 }
-
-
-
-
