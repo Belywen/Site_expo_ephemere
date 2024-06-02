@@ -1,0 +1,47 @@
+h2 {
+    padding-bottom: 8%;
+}
+
+.formTickets {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    margin-bottom: 10%;
+}
+
+.label_tickets {
+    width: 60%; 
+    border: 1px solid salmon;
+    padding: 4%;
+    border-radius: 10px;
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    font-weight: bolder;
+}
+
+.label_tickets label {
+    padding-bottom: 3%;
+}
+
+.prix {
+    font-size: 1.2em;
+}
+
+.miniBande {
+    height: 0.1em; 
+    background-color: rgb(255, 160, 122);
+}
+
+form img {
+    padding-top: 4%;
+}
+
+.btnAjouter {
+    background-color:  whitesmoke;
+    border-radius: 5px;
+    padding: 1%;
+    color: black;
+    font-weight: bold;
+    box-shadow: 0.5px 1px 1px 0.5px  rgb(255, 160, 122);
+}
