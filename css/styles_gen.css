@@ -99,7 +99,7 @@ ul li a:hover {
 .blockPrinc {
     display: grid;
     grid-template-columns: repeat(5, 1fr);
-    grid-template-rows: repeat(2, 2em);
+    grid-template-rows: repeat(3, 2em);
 }
 
 .bande {

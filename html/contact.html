@@ -6,7 +6,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link href="../css/styles_gen.css" rel="stylesheet">
     <link href="../css/styles_gen_others.css" rel="stylesheet">
-    <link href="../css/styles_tickets.css" rel="stylesheet">
+    <link href="../css/styles_contact.css" rel="stylesheet">
     <script src="../js/script_burger.js" defer></script>
     <title>Cinéma Production</title>
 </head>
@@ -41,10 +41,23 @@
             <h1>Nous contacter</h1>
         </section>      
         
-        <section class="block blocTickets">
+        <section class="block blockmessage">
             <h2>Merci de nous laisser votre message</h2>
             <form action="traitement.php" method="post">
+                    <label for="name">Votre nom :</label>
+                    <input id="name" type="text" value="" size="35">
+                
+                    <label for="firstName">Votre prénom :</label>
+                    <input id="firstName" type="text" value="" size="35">
+                
+                    <label for="email">Votre email :</label>
+                    <input id="email" type="email" name="email" size="35" required>
+                
+                    <label for="message">Votre message :</label>
+                    <textarea id="textarea" name="textarea" placeholder="Rédigez votre texte">                    
+                    </textarea>
 
+                <p class="buttonEnv"><input class="btnEnvoyer" type="submit" value="Envoyer"></p>
             </form>
         </section>
     </main>
