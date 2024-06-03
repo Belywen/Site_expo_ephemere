@@ -17,26 +17,41 @@ body {
 }
 
 /*header*/
-
-#navbar {
+header {
+    padding: 3% 8%;
     display: flex;
-    justify-content: space-between;
-    padding: 1% 8%;
+    flex-direction: row;
+    align-content: space-between;
 }
 
 #blockLogo {
-    width:25%;
+    width: 70%;
 }
 
 #logo {
-    width:40%;
+    width:75%;
 }
+
+#navbar {
+    width: 25%;
+    display: flex;
+    justify-content: space-between;
+}
+
+#blockPanier {
+    text-align: end;
+    align-content: center;
+}
+
+#panier {
+    width: 18%;
+} 
 
 ul {
     display: none;
     position: absolute;
     top: 2%;
-    left: 51%;
+    left: 20%;
     background-color: whitesmoke;
     border-radius: 20px;
     box-shadow: 0px 8px 8px 0px black;
