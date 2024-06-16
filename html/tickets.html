@@ -35,6 +35,12 @@
         <div id="blockPanier">
             <a href="./panier.html">
                 <img id="panier" src="../images/panier.png">
+                <?php
+                // Affichage du message de confirmation à côté du panier
+                if (isset($_GET['message'])) {
+                    echo "<span class='panierMessage'>" . htmlspecialchars($_GET['message']) . "</span>";
+                }
+                ?>
             </a>
         </div>
     </header>
@@ -56,7 +62,7 @@
                             <p class="miniBande"></p>
                             <img src="../images/tickets/ticket_adult.jpg" alt="Image du billet adulte">
                         </div>
-                        <input class="btnAjouter" type="submit" name="Ajouter" value="Ajouter">
+                        <input class="btnAjouter" type="submit" name="ticketAdult" value="Ajouter">
                     </div>
 
                     <div class="formTickets">
@@ -65,7 +71,7 @@
                             <p class="miniBande"></p>
                             <img src="../images/tickets/ticket_enfant.jpg" alt="Image du billet enfant">
                         </div>                    
-                        <input class="btnAjouter" type="submit" name="Ajouter" value="Ajouter">                    
+                        <input class="btnAjouter" type="submit" name="ticketEnfant" value="Ajouter">                    
                     </div>
                 </form>
             </div>

@@ -60,7 +60,7 @@ if (isset($_POST['Ajouter'], $_POST['matos']) && $_POST['matos'] != "--Matos en 
             if (empty($_SESSION['panier'])) {
                 echo "<h1>Votre Panier est vide</h1>";
             } else {
-                echo "<h1>Votre Panier de ticket:</h1>";
+                echo "<h1>Votre Panier :</h1>";
                 echo "<ul>";
                 $compteurPanier = 0;
                 foreach ($_SESSION['panier'] as $article) {

@@ -42,6 +42,19 @@
         
         <section class="block">
             <h2>Panier</h2>
+            <!--<h1>Votre panier est vide</h1>
+            <a href='../tickets.html'>Commander un ticket</a>"-->
+
+            <ul>
+                <?php 
+                // Affichage de chaque article avec son nombre d'occurrences
+                $compteurCde = 1;
+                foreach ($commande as $article => $nbArticles) {
+                    echo "<li>Article N°$compteurCde : $nbArticles x $article</li>";
+                    $compteurCde++;
+                }
+                ?>
+            </ul>
             
         </section>
     </main>
