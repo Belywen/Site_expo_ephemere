@@ -6,13 +6,6 @@ if (isset($_POST['Ajouter'], $_POST['matos']) && $_POST['matos'] != "--Matos en 
     $_SESSION['panier'][] = $_POST['matos'];
 }
 
-/*
-// Redirection vers la page de commande si le panier n'est pas vide
-if (isset($_POST['Commander']) && !empty($_SESSION['panier'])) {
-    header("Location: commande.php");
-    exit;
-}
-*/
 ?>
 
 <!DOCTYPE html>
@@ -67,7 +60,7 @@ if (isset($_POST['Commander']) && !empty($_SESSION['panier'])) {
             if (empty($_SESSION['panier'])) {
                 echo "<h1>Votre Panier est vide</h1>";
             } else {
-                echo "<h1>Votre Panier :</h1>";
+                echo "<h1>Votre Panier de ticket:</h1>";
                 echo "<ul>";
                 $compteurPanier = 0;
                 foreach ($_SESSION['panier'] as $article) {
