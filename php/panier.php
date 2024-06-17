@@ -1,3 +1,7 @@
+<?php
+    session_start();
+?>
+
 <!DOCTYPE html>
 <html lang="fr">
 
@@ -42,19 +46,21 @@
         
         <section class="block">
             <h2>Panier</h2>
-            <!--<h1>Votre panier est vide</h1>
-            <a href='../tickets.html'>Commander un ticket</a>"-->
-
+            <?php if (empty($commande)) : ?>
+            <h1>Votre panier est vide</h1>
+            <a href='tickets.html'>Commander un ticket</a>
+        <?php else : ?>
             <ul>
                 <?php 
-                // Affichage de chaque article avec son nombre d'occurrences
                 $compteurCde = 1;
                 foreach ($commande as $article => $nbArticles) {
-                    echo "<li>Article N°$compteurCde : $nbArticles x $article</li>";
+                    $articleName = ($article == 'adult') ? 'Ticket Adulte' : 'Ticket Enfant';
+                    echo "<li>Article N°$compteurCde : $nbArticles x $articleName</li>";
                     $compteurCde++;
                 }
                 ?>
             </ul>
+        <?php endif; ?>
             
         </section>
     </main>
