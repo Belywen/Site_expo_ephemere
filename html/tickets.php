@@ -1,3 +1,11 @@
+<?php
+    session_start();
+
+    if (!isset($_SESSION['panier'])) {
+        $_SESSION['panier'] = [];
+    }
+?>
+
 <!DOCTYPE html>
 <html lang="fr">
 
@@ -35,12 +43,6 @@
         <div id="blockPanier">
             <a href="./panier.html">
                 <img id="panier" src="../images/panier.png">
-                <?php
-                // Affichage du message de confirmation à côté du panier
-                if (isset($_GET['message'])) {
-                    echo "<span class='panierMessage'>" . htmlspecialchars($_GET['message']) . "</span>";
-                }
-                ?>
             </a>
         </div>
     </header>
@@ -55,14 +57,14 @@
         <section class="block blocTickets">
             <h2>Exposition du 09 septembre 2024</h2>
             <div class="vente_tickets">
-                <form action="traitement_tickets.php" method="post">
+                <form action="tickets.php" method="post">
                     <div class="formTickets">
                         <div class="label_tickets">
                             <label for="adult">Ticket adulte : <span class="prix">10 €</span></label>
                             <p class="miniBande"></p>
                             <img src="../images/tickets/ticket_adult.jpg" alt="Image du billet adulte">
                         </div>
-                        <input class="btnAjouter" type="submit" name="ticketAdult" value="Ajouter">
+                        <input id="adult" class="btnAjouter" type="submit" name="ticketAdult" value="Ajouter">
                     </div>
 
                     <div class="formTickets">
@@ -71,10 +73,33 @@
                             <p class="miniBande"></p>
                             <img src="../images/tickets/ticket_enfant.jpg" alt="Image du billet enfant">
                         </div>                    
-                        <input class="btnAjouter" type="submit" name="ticketEnfant" value="Ajouter">                    
+                        <input id="child" class="btnAjouter" type="submit" name="ticketEnfant" value="Ajouter">                    
                     </div>
                 </form>
             </div>
+
+           
+            <?php                
+                if (isset($_POST['ticketAdult']) && isset($_POST['adult'])) {
+                    $_SESSION['panier'][] = $_POST['adult'];
+                }
+                
+                if (isset($_POST['ticketEnfant']) && isset($_POST['child'])) {
+                    $_SESSION['panier'][] = $_POST['child'];
+                }      
+                
+                var_dump($_SESSION['panier']);
+
+                if (isset($_SESSION['panier'])) {
+                    echo "<h1>Papapanier : </h1>";
+                    echo "<ul>";
+                    foreach ($_SESSION['panier'] as $ticket) {
+                        echo "<li> Ticket $ticket </li>";
+                    }
+                    echo "</ul>";
+                }
+    
+            ?>
         </section>
     </main>
 
